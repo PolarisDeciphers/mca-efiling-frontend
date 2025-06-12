@@ -1,12 +1,14 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CHG1Form from './pages/CHG1Form';
 
 function App() {
   return (
-    <div style={{ textAlign: 'center', padding: '50px' }}>
-      <h1>MCA E-Filing Assistant</h1>
-      <p>Backend API connected at: https://mca-efiling-backend.onrender.com</p>
-      <p>This React frontend is now Vercel-ready.</p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<div className="text-center mt-20 text-2xl">Welcome to MCA E-Filing Assistant</div>} />
+        <Route path="/chg1" element={<CHG1Form />} />
+      </Routes>
+    </Router>
   );
 }
 
